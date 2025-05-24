@@ -15,7 +15,7 @@ export default function Home() {
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center">
       <Navbar />
       {/* <SplashCursor  /> */}
-      <div className="absolute top-0 right-0 left-0 bottom-0 w-full h-full">
+      <div className="fixed inset-0 w-screen h-screen z-0">
         <Silk
           speed={5}
           scale={1}

@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className="navbar py-1 flex items-center justify-center">
       {/* Navbar kanan : Menu */}
       <ul className={`menu flex items-center sm:gap-10 gap-4 md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0
-        sm:opacity-100 bg-white/10 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl 
+        sm:opacity-100 bg-white/10 backdrop-blur-md p-5 mb-10 rounded-br-2xl rounded-bl-2xl 
         md:bg-transparent transition-all md:transition-none z-40
         ${active ? "top-0 opacity-100":"-top-10 opacity-0"}`}>
         <li><a href="#beranda" className="sm:text-lg text-base font-medium">Home</a></li>
