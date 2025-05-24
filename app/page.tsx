@@ -9,10 +9,12 @@ import CircularText from "./components/CircularText/CircularText";
 import Silk from "./components/Silk/Silk";
 import Navbar from "./components/Navbar";
 import LogoWall from "./components/LogoWall";
+import ClickSpark from "./components/ClickSpark/ClickSpark";
 
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center">
+          
       <Navbar />
       {/* <SplashCursor  /> */}
       <div className="fixed inset-0 w-screen h-screen z-0">
@@ -26,8 +28,24 @@ export default function Home() {
       </div>
       
       <div className="container mx-auto h-screen flex flex-col justify-center items-center z-10">
+       <ClickSpark
+            sparkColor='#fff'
+            sparkSize={11}
+            sparkRadius={20}
+            sparkCount={8}
+            duration={400}>
         <div className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto text-center gap-8">
           {/* CircularText dengan gambar di tengah */}
+          <AnimatedContent
+            distance={180}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 30, friction: 15 }}
+            initialOpacity={0.0}
+            animateOpacity
+            scale={1.0}
+            threshold={0.4}
+          >
           <div className="relative flex items-center justify-center w-40 h-40 mb-10 md:mb-20 mr-1">
             <Image src="/images/logo/kabinet.png" alt="Logo Himpunan" width={120} height={120} className=" mr-3 mt-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
             <CircularText
@@ -37,6 +55,7 @@ export default function Home() {
               className="mx-auto text-[#ffffff] "
             />
           </div>
+           </AnimatedContent>
           <AnimatedContent
             distance={120}
             direction="vertical"
@@ -78,6 +97,7 @@ export default function Home() {
              <LogoWall />
           </div>
         </div>
+        </ClickSpark>
       </div>
     </div>
   );
