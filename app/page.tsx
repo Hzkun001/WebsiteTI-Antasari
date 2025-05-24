@@ -10,8 +10,12 @@ import Silk from "./components/Silk/Silk";
 import Navbar from "./components/Navbar";
 import LogoWall from "./components/LogoWall";
 import ClickSpark from "./components/ClickSpark/ClickSpark";
+import { useRef } from 'react';
+import VariableProximity from './components/VariableProximity/VariableProximity';
 
 export default function Home() {
+  const containerRef = useRef(null);
+
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col items-center justify-center">
           
@@ -95,6 +99,20 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center mt-10 text-white">
              <LogoWall />
+          </div>
+          <div
+          ref={containerRef}
+          style={{position: 'relative'}}
+          >
+            <VariableProximity
+              label={'lorem ipsum dolor sit amet lorem ipsum dolor sit amet lore Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
+              className={'variable-proximity-demo'}
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={containerRef}
+              radius={0}
+              falloff='linear'
+            />
           </div>
         </div>
         </ClickSpark>
