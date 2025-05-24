@@ -1,9 +1,7 @@
 import React from "react";
 
 const technologies = [
-  "astro",
-  "vue",
-  "react",
+  
   "This-is-TI",
   "UIN-Antasari",
   "Teknologi-Informasi",
@@ -12,7 +10,7 @@ const technologies = [
   "APT",
   "Waifu",
   "Antasari-Programming-Team",
-  "GeoPark-Meratus",
+  "Geopark-Meratus",
   "Diginest",
   "Waifu2",
 ];
