@@ -93,7 +93,7 @@ export default function Home() {
               rootMargin="-50px"
             />
           </div>
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center justify-center mt-10 text-white">
              <LogoWall />
           </div>
         </div>
