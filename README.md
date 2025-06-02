@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website TI
 
-## Getting Started
+Website ini adalah aplikasi web berbasis [Next.js](https://nextjs.org/) dengan berbagai komponen interaktif dan animasi modern, seperti Silk background, animasi teks, proximity variable font, dan lain-lain.
 
-First, run the development server:
+## Fitur Utama
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Silk Background**: Animasi latar belakang berbasis WebGL/Three.js.
+- **RotatingText & SplitText**: Animasi teks dinamis.
+- **VariableProximity**: Efek proximity pada variable font.
+- **ClickSpark**: Efek spark saat klik.
+- **LogoWall**: Showcase logo.
+- **AnimatedContent**: Reveal animasi konten saat scroll.
+- **Navbar**: Navigasi utama responsif.
+
+## Requirement
+
+- Node.js v18 atau lebih baru
+- npm v9 atau lebih baru (atau gunakan yarn/pnpm)
+- Koneksi internet (untuk instalasi font dan dependensi)
+- (Opsional) Git, jika ingin clone dari repository
+
+## Instalasi
+
+1. **Clone repository**
+    ```bash
+    git clone <url-repo-anda>
+    cd website\ TI
+    ```
+
+2. **Install dependencies**
+    ```bash
+    npm install
+    ```
+    atau jika menggunakan yarn:
+    ```bash
+    yarn install
+    ```
+
+3. **Jalankan development server**
+    ```bash
+    npm run dev
+    ```
+    atau:
+    ```bash
+    yarn dev
+    ```
+
+4. **Buka di browser**
+    ```
+    http://localhost:3000
+    ```
+
+## Struktur Folder
+
+```
+website TI/
+├── app/
+│   ├── components/
+│   │   ├── AnimatedContent/
+│   │   ├── CircularText/
+│   │   ├── ClickSpark/
+│   │   ├── LogoWall/
+│   │   ├── Navbar/
+│   │   ├── RotatingText/
+│   │   ├── Silk/
+│   │   ├── SplitText/
+│   │   └── VariableProximity/
+│   ├── page.tsx
+│   └── globals.css
+├── public/
+│   └── images/
+│       └── logo/
+├── package.json
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Konfigurasi Font
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Agar efek variable font berjalan, pastikan font variable (misal Roboto Flex, Inter, atau GeistVF) sudah diimport di `app/globals.css`.  
+Contoh import Google Fonts variable:
+```css
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+body {
+  font-family: 'Roboto Flex', sans-serif;
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build untuk Produksi
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Catatan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Jika ada error terkait React hooks, pastikan semua komponen yang memakai hooks berada di dalam Client Component (`"use client"` di paling atas file).
+- Untuk efek proximity, pastikan browser mendukung variable font dan font sudah diimport.
+- Jika ingin deploy ke Vercel, cukup klik "Import Project" di [Vercel](https://vercel.com/) dan ikuti instruksi.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Selamat mengembangkan Website TI!**
