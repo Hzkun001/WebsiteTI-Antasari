@@ -145,7 +145,7 @@ export default function Home() {
                 <img src="/images/logo/kabinet.png" alt="Dosen" className="w-14 h-14 rounded-full border-2 border-[#f15a24] shadow" />
                 <div>
                   <div className="font-bold text-white">Hanifah, S.T, M.T</div>
-                  <div className="text-gray-400 text-sm">Staf Ahli Menteri Bidang Hubungan Antar Lembaga Pusat</div>
+                  <div className="text-gray-400 text-sm">Staf Ahli Menteri Bidang Hubungan Antar Lembaga Pusats</div>
                 </div>
               </div>
             </div>
