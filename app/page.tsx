@@ -29,50 +29,49 @@ export default function Home() {
       </div>
 
       {/* HERO SECTION */}
-      <div className="w-full flex flex-col items-center justify-center z-10 pt-24 pb-16">
+      <div className="w-full flex flex-col items-center justify-center z-10 pt-24 pb-10 sm:pb-16 px-2 sm:px-4">
         <ClickSpark sparkColor='#fff' sparkSize={11} sparkRadius={20} sparkCount={8} duration={400}>
-          <div className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto text-center gap-8">
+          <div className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto text-center gap-6 sm:gap-8">
             <AnimatedContent distance={180} direction="vertical" reverse={false} config={{ tension: 30, friction: 15 }} initialOpacity={0.0} animateOpacity scale={1.0} threshold={0.4}>
-              <div className="relative flex items-center justify-center w-40 h-40 mb-10 md:mb-20 mr-1">
+              <div className="relative flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 mb-8 sm:mb-10 md:mb-20 mr-1">
                 <Image src="/images/logo/kabinet.png" alt="Logo Himpunan" width={120} height={120} className="mr-3 mt-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10" />
                 <CircularText text="*KABINET*ARNANTA" onHover="speedUp" spinDuration={16} className="mx-auto text-[#ffffff] " />
               </div>
             </AnimatedContent>
             <AnimatedContent distance={120} direction="vertical" reverse={false} config={{ tension: 90, friction: 18 }} initialOpacity={0.2} animateOpacity scale={1.1} threshold={0.2}>
-              <div className="flex flex-col items-center gap-3">
-                <h1 className="text-2xl md:text-4xl lg:text-5xl text-white font-bold mt-15">Himpunan Mahasiswa <br className="block sm:hidden" /> Teknologi Informasi</h1>
-                <RotatingText texts={['- Religius -', '- Sains - ', '- Teknologi -']} mainClassName="px-1 sm:px-2 md:px-3 bg-[#f15a24] text-white overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-xl md:text-2xl font-bold inline-flex transition-all" staggerFrom={"last"} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "-120%" }} staggerDuration={0.025} splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1" transition={{ type: "spring", damping: 30, stiffness: 400 }} rotationInterval={2000} />
+              <div className="flex flex-col items-center gap-2 sm:gap-3">
+                <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white font-bold mt-8 sm:mt-15">Himpunan Mahasiswa <br className="block sm:hidden" /> Teknologi Informasi</h1>
+                <RotatingText texts={['- Religius -', '- Sains - ', '- Teknologi -']} mainClassName="px-1 sm:px-2 md:px-3 bg-[#f15a24] text-white overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-lg sm:text-xl md:text-2xl font-bold inline-flex transition-all" staggerFrom={"last"} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "-120%" }} staggerDuration={0.025} splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1" transition={{ type: "spring", damping: 30, stiffness: 400 }} rotationInterval={2000} />
               </div>
             </AnimatedContent>
-            <div className="flex flex-col items-center gap-2">
-              <SplitText text="Bersama membangun Kolaborasi dari HMTI" className="text-xl md:text-2xl font-semibold text-center text-white mt-15" delay={50} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} threshold={0.2} rootMargin="-50px" />
+            <div className="flex flex-col items-center gap-1 sm:gap-2">
+              <SplitText text="Bersama membangun Kolaborasi dari HMTI" className="text-base sm:text-xl md:text-2xl font-semibold text-center text-white mt-8 sm:mt-15" delay={50} animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }} animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }} threshold={0.2} rootMargin="-50px" />
             </div>
-            <div className="flex items-center justify-center mt-10 text-white">
+            <div className="flex items-center justify-center mt-6 sm:mt-10 text-white w-full overflow-x-auto">
               <LogoWall />
             </div>
-            
           </div>
         </ClickSpark>
       </div>
 
       {/* SECTION BAWAH */}
-      <div className="w-full flex flex-col items-center justify-center z-20">
-        <div id="about">
+      <div className="w-full flex flex-col items-center justify-center z-20 px-2 sm:px-4">
+        <div id="about" className="w-full">
           <Section title="Tentang Himpunan Mahasiswa TI">
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto mt-4">
+            <p className="text-base sm:text-lg text-gray-200 max-w-2xl mx-auto mt-4">
               Himpunan Mahasiswa Teknologi Informasi (HMTI) UIN Antasari adalah organisasi mahasiswa yang berfokus pada pengembangan keilmuan, kolaborasi, dan inovasi di bidang teknologi informasi. Kami berkomitmen membangun komunitas yang religius, sains, dan teknologi.
             </p>
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <Section title="Visi & Misi">
-                <div className="grid md:grid-cols-2 gap-8 mt-6">
-                  <div className="rounded-2xl bg-gradient-to-br from-[#181c23] via-[#23272f] to-[#f15a24]/30 shadow-xl border border-[#f15a24]/30 p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
+                  <div className="rounded-2xl bg-gradient-to-br from-[#181c23] via-[#23272f] to-[#f15a24]/30 shadow-xl border border-[#f15a24]/30 p-6 sm:p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
                     <span className="absolute top-4 right-4 bg-[#f15a24] text-white text-xs font-bold px-3 py-1 rounded-full shadow">Visi</span>
-                    <h3 className="text-xl font-bold mb-2 text-[#f15a24]">Visi</h3>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#f15a24]">Visi</h3>
                     <p className="text-gray-100">Menjadi himpunan mahasiswa yang unggul, religius, dan inovatif dalam pengembangan teknologi informasi di tingkat nasional.</p>
                   </div>
-                  <div className="rounded-2xl bg-gradient-to-br from-[#181c23] via-[#23272f] to-[#f15a24]/30 shadow-xl border border-[#f15a24]/30 p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                  <div className="rounded-2xl bg-gradient-to-br from-[#181c23] via-[#23272f] to-[#f15a24]/30 shadow-xl border border-[#f15a24]/30 p-6 sm:p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
                     <span className="absolute top-4 right-4 bg-[#f15a24] text-white text-xs font-bold px-3 py-1 rounded-full shadow">Misi</span>
-                    <h3 className="text-xl font-bold mb-2 text-[#f15a24]">Misi</h3>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#f15a24]">Misi</h3>
                     <ul className="list-disc ml-6 text-gray-100 space-y-2">
                       <li>Mengembangkan potensi dan kreativitas mahasiswa TI.</li>
                       <li>Meningkatkan kolaborasi dan jejaring dengan dunia industri dan akademik.</li>
