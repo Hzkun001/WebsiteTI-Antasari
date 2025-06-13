@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 const technologies = [
-  
   "This-is-TI",
   "UIN-Antasari",
   "Teknologi-Informasi",
@@ -16,11 +15,12 @@ const technologies = [
 
 const LogoWall: React.FC = () => (
   <div className="relative overflow-x-hidden py-8">
+    {/* Gradasi kiri-kanan: mobile pakai hitam transparan, desktop pakai background */}
     <div
-      className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
+      className="pointer-events-none absolute inset-y-0 left-0 w-20 sm:w-32 bg-gradient-to-r from-black/60 sm:from-[var(--background)] to-transparent z-20"
     ></div>
     <div
-      className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
+      className="pointer-events-none absolute inset-y-0 right-0 w-20 sm:w-32 bg-gradient-to-l from-black/60 sm:from-[var(--background)] to-transparent z-20"
     ></div>
 
     <div className="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
